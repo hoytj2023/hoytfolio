@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-content:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 30px; 
+            justify-items: center; 
+            margin-top: 20px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            max-width: 850px; 
+        }
+
+        .image-grid img {
+            width: 100%;
+            max-width: 400px; 
+            aspect-ratio: 4 / 3; 
+            object-fit: cover; 
+            border-radius: 10px; 
+            border: 2px solid #000000; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+        }
+    </style>
+    <script>
+        function showTab(id) {
+            const sections = document.querySelectorAll('.tab-content');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+        window.onload = () => showTab('home');
+    </script>
+
+</head>
+<body>
+    <nav>
+        <a href="javascript:showTab('home')">Home</a>
+        <a href="javascript:showTab('cgt116')">CGT 116</a>
+        <a href="javascript:showTab('cgt118')">CGT 118</a>
+        <a href="javascript:showTab('cgt123')">CGT 123</a>
+        <a href="javascript:showTab('cgt147')">CGT 147</a>
+        <a href="javascript:showTab('about')">About Me</a>
+        <a href="javascript:showTab('contact')">Contact</a>
+    </nav>
+
+    <div id="home" class="tab-content active">
+        <h1>Home</h1>
+            <p>Welcome to my webpage. This was created using all skills learned in CGT 141 this semester. Above there are tabs to click on that will show projects I have created in various different courses in my academic career in Animation/VFX.</p>
+            <p>If there are any questions, you can contact me <a href="javascript:showTab('contact')">here</a>.</p>
+            <br> <img src="ThumbsUp.jpg" alt="Thumbs Up Image" width="200">
+    </div>
+
+    <div id="cgt116" class="tab-content">
+        <h1>CGT 116</h1>
+            <p>CGT 116, also known as Geometric Modeling for Visualization and Communication, is an intro 3D modeling class. It was the first class I was put into when I had switched into Animation. Below is a link to my website I had to create for this class, along with a sketchfab link that holds all of my projects.</p>
+            <br><p> Sketchfab is a website that I put all of my finished projects into.
+                Said projects can be found <a href="https://sketchfab.com/joshhoyt/models" target="_blank">here</a>.</p>
+                <br><p> Here is a link to <a href="https://hoytcreates.weebly.com/" target="_blank">my website</a> I had to create in CGT 116.</p>
+    </div>
+
+    <div id="cgt118" class="tab-content">
+        <h1>CGT 118</h1>
+            <p>CGT 118, also known as Fundamentals of Imaging Technology, was one of the more fun classes I have taken. A little bit of coding as the beginning, but I was primarily being taught photoshop skills and different drawing techniques. Below are some images of different projects I completed throughout the class.</p>
+        <h2>Processing</h2>
+            <img src="Hoyt118Ex1.png" alt="Processing Assignment" width="250" style="border: 2px solid black; padding: 5px;">
+            <p>This is from the first assignment in the class, coded with <a href="https://processing.org/" target="_blank">Processing.</a></p>
+        <h2>Photomerge</h2>
+            <img src="Hoyt118Ex2.png" alt="Photomerge Assignment" width="250" style="border: 2px solid black; padding: 5px;">
+            <p>This image is my submission of the "photomerge" assignment, where you were to take 2+ separate images and seamlessly merge them into one.</p>
+        <h2>Cartooning</h2>
+            <img src="Hoyt118Ex5-1.png" alt="Cartooning Assignment" width="250" style="border: 2px solid black; padding: 5px;">
+            <p> This image is from the "cartooning" assignment, where you were to draw and color an image with fine lines and shading. I took inspiration from the show <a href="https://www.google.com/search?q=samurai+jack&rlz=1C1RXQR_enUS1066US1071&oq=Samurai+Jack+&gs_lcrp=EgZjaHJvbWUqEggAEAAYQxjjAhixAxiABBiKBTISCAAQABhDGOMCGLEDGIAEGIoFMg8IARAuGEMYsQMYgAQYigUyBwgCEC4YgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEC4YgAQyBwgHEC4YgAQyBwgIEC4YgAQyBwgJEAAYgATSAQgxNzM5ajBqOagCALACAQ&sourceid=chrome&ie=UTF-8/" target="_blank">Samurai Jack.</a></p>
+        <h2> Practical</h2>
+            <img src="Hoyt118Practical.png" alt="Lab Practical" width="250" style="border: 2px solid black; padding: 5px;">
+            <p>This image is from the Lab Practical conducted late in the semester. You were to choose between a couple different assignments, this one was to give the car good shading and line details. The other options were to code a train in Processing, or correct an old photo to fix the cracks and white spots.</p>
+        <h2>Final</h2>  
+            <img src="CGT118Final_Hoyt.png" alt="Final Project" width="250" style="border: 2px solid black; padding: 5px;">
+            <p>This is the final project I made in this class. It's a recreation of Miles Morales from the Spiderverse movies.</p>
+    </div>
+
+    <div id="cgt123" class="tab-content">
+        <h1>CGT 123</h1>
+            <p>CGT 123, also known as Animation Foundations, is an intro 2D animating class. I was tought various techniques on how to properly animate 2d scenes, with simple projects such as a hammer swing or a ball bounce. There was 1 3D project in this class, but other than that all assignments were 2D. Below are videos of my animations created in the class.
+            <br><br>All 2D assignments were done on a Waycom tablet using Blender.</p>
+        <h2>Ball Bounce</h2>
+            <img src="Hoyt_BB.gif" alt="2D Ball Bounce Animation" width="450" style="border: 2px solid black; padding: 5px;">
+            <p>This is the first assignment done in the class, a 2D ball bounce. This assignment teaches you the squash and stretch technique when it comes to animating moving objects.</p>
+        <h2>Hammer Down</h2>
+            <img src="Hoyt_HD.gif" alt="Hammer Down Animation" width="450" style="border: 2px solid black; padding: 5px;">
+            <p>This is the 2nd assignment in this class, called "Hammer Down". This assignment teaches you how to keep the same weight and composition of an object in an animation.</p>
+        <h2>Walk Cycle</h2>
+            <img src="Hoyt_Walk.gif" alt="Walk Cycle Animation" width="450" style="border: 2px solid black; padding: 5px;">
+            <p>This is the 3rd assignment done in the class, a walk cycle. This gets you into how to get character movement down. </p>
+        <h2>Sack Jump</h2>
+            <img src="Hoyt_SJ.gif" alt="Sack Jump Animation" width="450" style="border: 2px solid black; padding: 5px;">
+            <p>This is the 4th assignment done in the class, a sack jump. This assignment teaches you how to make an inanimate object come to life.</p>
+        <h2>3D Ball Bounce</h2>
+            <img src="Hoyt_3DBB.gif" alt="3D Ball Bounce Animation" width="450" style="border: 2px solid black; padding: 5px;">
+            <p>This is the final assignment done in this class, and also the only 3D assignment done in this class. Made using Blender.</p>
+    </div>
+
+    <div id="cgt147" class="tab-content">
+        <h1>CGT 147</h1>
+            <p>CGT 147, or Visual Effects Introduction, is an intro class for editing and camera techniques and both 3D and VFX modeling. The projectes in this class use a lot of procedural modeling in Houdini. At the time I am coding this webpage, I am also working on the final project for CGT 147 so I will not be supplying that here. But below are some images and videos of projects I have created in this class.</p>
+        <h2>Skills 2</h2>
+            <p>Skills 1 was just a screenshot of the Houdini application and some questions about Houdini, so the first actual project was skills 2.</p>
+                <img src="HoytSkills2.png" alt="Chandelier Render with Houdini" width="400" style="border: 2px solid black; padding: 5px;">
+                <p>This is the first actual project done in the class, a 3D model of a chandelier. At the time, I couldn't figure out how to use the rendering engine so I just took a screenshot of my model. I never ended up going back to get the final render.</p>
+        <h2>Skills 3</h2>
+            <img src="HoytSkills3.png" alt="Procedural Modeling Stairs" width="400" style="border: 2px solid black; padding: 5px;">
+            <p>This is the second project done in the class, and the first instance of using procedural modeling. If given the actual Houdini file, you could go in and change the height or width of the stairs, the height of the railing, or how many bars the railing has. </p>
+        <h2>Skills 5</h2>
+            <p>Skills 4 was just an introduction into using Pyro. The final render was just a still image essentially of what is seen in this skills project, so I did not include it.</p>
+                <img src="Hoyt_Skills5.gif" alt="Barrel spewing out hazardous liquid GIF" width="400" style="border: 2px solid black; padding: 5px;">
+                <p>This rendering is of the last project before we began work on the final project. This project introduced particles and further enchanced use of pyro.</p>
+            <br><br> <p>At the time I am coding this project, I am still working on the final project for CGT 147, so that will not be included.</p>
+    </div>
+
+    <div id="about" class="tab-content">
+        <h1>About Me</h1>
+            <p>My name is Josh Hoyt, and I am currently a sophomore at Purdue University majoring in Animation/VFX. I grew up playing a ton of video games, which is partly what inspired me to choose this major. Hopefully, one day, I could work behind the scenes and help create a video game or movie.
+            <br><br>Outside of school, some of my hobbies are photography, pickleball, watching sports, and playing video games. Below are some of my favorite pictures I have taken in the past.
+            <br><br>This entire webpage was created for a final project in one of my classes, CGT 141. I have no prior experience coding, so this class at times was very challening for me. But the professor, Carlos, is incredible and is willing to work with you to help you figure things out. The TA's in lab are also incredible at teaching and helping out with the different projects. I have learned a lot, but am glad to finally be done with the class.
+            <br><br>If you would like to get to know anything else about me, or have any other questions, you can find me <a href="javascript:showTab('contact')">here.</a></p>
+             <!-- Image Grid -->
+        <div class="image-grid">
+            <img src="Slideshow1.jpg" alt="Image 1">
+            <img src="Slideshow2.jpg" alt="Image 2">
+            <img src="Slideshow3.jpg" alt="Image 3">
+            <img src="Slideshow4.jpg" alt="Image 4">
+        </div>
+
+    </div>
+
+    <div id="contact" class="tab-content">
+        <h1>Contact</h1>
+            <p>You could get in touch with me via the email(s) below, or via my phone number:</p>
+                <p><a href="mailto:hoyt8@purdue.edu">hoyt8@purdue.edu</a></p>
+                <p><a href="mailto:hoytj2023@gmail.com">hoytj2023@gmail.com</a></p>
+                <p>317-427-8405</p>
+                
+        <form action="mailto:hoyt8@purdue.edu" method="POST" enctype="text/plain">
+            <!-- Name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                
+            <!-- Feedback Type -->
+            <label for="feedback-type">Feedback Type:</label><br>
+            <select id="feedback-type" name="feedback_type">
+                <option value="website">Website</option>
+                <option value="projects">Projects</option>
+                <option value="other">Other</option>
+            </select><br><br>
+                
+            <!-- Feedback Message -->
+            <label for="feedback">Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="6" cols="40" placeholder="Write your feedback here..." required></textarea><br><br>
+                
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
