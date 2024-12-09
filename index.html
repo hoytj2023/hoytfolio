@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage</title>
+    <title>Welcome!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,9 +33,6 @@
         }
         .tab-content.active {
             display: block;
-        }
-        .tab-content:nth-of-type(odd) {
-            background-color: #f9f9f9;
         }
         .image-grid {
             display: grid;
@@ -77,6 +74,7 @@
         <a href="javascript:showTab('cgt147')">CGT 147</a>
         <a href="javascript:showTab('about')">About Me</a>
         <a href="javascript:showTab('contact')">Contact</a>
+        <a href="javascript:showTab('Q&A')">Q&A</a>
     </nav>
 
     <div id="home" class="tab-content active">
@@ -117,7 +115,7 @@
     <div id="cgt123" class="tab-content">
         <h1>CGT 123</h1>
             <p>CGT 123, also known as Animation Foundations, is an intro 2D animating class. I was tought various techniques on how to properly animate 2d scenes, with simple projects such as a hammer swing or a ball bounce. There was 1 3D project in this class, but other than that all assignments were 2D. Below are videos of my animations created in the class.
-            <br><br>All 2D assignments were done on a Waycom tablet using Blender.</p>
+            <br><br>All 2D assignments were done on a Wacom tablet using Blender.</p>
         <h2>Ball Bounce</h2>
             <img src="Hoyt_BB.gif" alt="2D Ball Bounce Animation" width="450" style="border: 2px solid black; padding: 5px;">
             <p>This is the first assignment done in the class, a 2D ball bounce. This assignment teaches you the squash and stretch technique when it comes to animating moving objects.</p>
@@ -158,7 +156,7 @@
             <br><br>Outside of school, some of my hobbies are photography, pickleball, watching sports, and playing video games. Below are some of my favorite pictures I have taken in the past.
             <br><br>This entire webpage was created for a final project in one of my classes, CGT 141. I have no prior experience coding, so this class at times was very challening for me. But the professor, Carlos, is incredible and is willing to work with you to help you figure things out. The TA's in lab are also incredible at teaching and helping out with the different projects. I have learned a lot, but am glad to finally be done with the class.
             <br><br>If you would like to get to know anything else about me, or have any other questions, you can find me <a href="javascript:showTab('contact')">here.</a></p>
-             <!-- Image Grid -->
+        
         <div class="image-grid">
             <img src="Slideshow1.jpg" alt="Image 1">
             <img src="Slideshow2.jpg" alt="Image 2">
@@ -169,36 +167,44 @@
     </div>
 
     <div id="contact" class="tab-content">
-        <h1>Contact</h1>
-            <p>You could get in touch with me via the email(s) below, or via my phone number:</p>
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+            <title>Contact</title>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <h1>Contact</h1>
+            <p>I can't quite get this form to work. Every time I hit "send" it would just open up a page of my .php file.
+                <br> If you want to contact me, you can find me at the email(s) below: </p>
                 <p><a href="mailto:hoyt8@purdue.edu">hoyt8@purdue.edu</a></p>
                 <p><a href="mailto:hoytj2023@gmail.com">hoytj2023@gmail.com</a></p>
-                <p>317-427-8405</p>
-                
-        <form action="mailto:hoyt8@purdue.edu" method="POST" enctype="text/plain">
-            <!-- Name -->
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-                
-            <!-- Email -->
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-                
-            <!-- Feedback Type -->
-            <label for="feedback-type">Feedback Type:</label><br>
-            <select id="feedback-type" name="feedback_type">
-                <option value="website">Website</option>
-                <option value="projects">Projects</option>
-                <option value="other">Other</option>
-            </select><br><br>
-                
-            <!-- Feedback Message -->
-            <label for="feedback">Feedback:</label><br>
-            <textarea id="feedback" name="feedback" rows="6" cols="40" placeholder="Write your feedback here..." required></textarea><br><br>
-                
-            <!-- Submit Button -->
-            <button type="submit">Submit</button>
-        </form>
+            <form method="post" action="send-email.php">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required>
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" required></textarea>
+
+                <br>
+
+                <button>Send</button>
+            </form>
+        </body>
+    </div>
+
+    <div id="Q&A" class="tab-content">
+        <h2>What kept you inspired while making this project?</h2>
+            <p>At first, when this project was announced, I pushed it off and was dreading even starting it. Once I had started it, however, it became sort of fun to challenge myself to be creative. I have 0 background in coding at all, so this whole experience was new and honestly fun.</p>
+        <h2>What tools helped you in learning HTML and CSS?</h2>
+            <p>If I had kept going to the class, I would definitely say class. Carlos is a great professor, and is more than willing to help his students learn and understand. However, with the class being at 7:30 AM, I slowly faded out of going to class due to other things going on. So for me, Google and Youtube were massive factors in helping me learn and finish this project to my best ability.</p>
+        <h2>Would you do something like this again?</h2>
+            <p>Probably not. Maybe if I was getting paid, or if I have to for another assignment or something. Like I said, having no background in any form of coding doesn't make this that easy. I'm proud of myself for even getting it done.</p>
     </div>
 </body>
 </html>
